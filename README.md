@@ -1,2 +1,3 @@
 # practice-test-jest
-## A  simple test writtren in nodejs and jest
+
+## A simple test written in nodejs and jest

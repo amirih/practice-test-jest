@@ -1,12 +1,13 @@
 import { test } from "@jest/globals";
-import { testFirst, positiveNumber, isPrimeNumber } from "./index.js";
-import { randomInt } from "crypto";
+import { testWorks, positiveNumber, isPrimeNumber } from "./index.js";
+import { randomBytes, randomInt } from "crypto";
 
-test("testing", () => {
-  expect(testFirst("hello")).toBe("hello");
+test("does test work?", () => {
+  const string = randomBytes(8).toString();
+  expect(testWorks(string)).toBe(string);
 });
 
-test("is positive", () => {
+test("return positive", () => {
   const i = randomInt(0, 100000000000);
   expect(positiveNumber(i)).toBe(i);
   expect(positiveNumber(-1 * i)).toBe(i);

@@ -1,5 +1,4 @@
-export function testFirst(str) {
-  console.log(str);
+export function testWorks(str) {
   return str;
 }
 

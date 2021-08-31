@@ -2,7 +2,7 @@ export function testWorks(str) {
   return str;
 }
 
-export function positiveNumber(number) {
+export function makeItPositive(number) {
   if (number < 0) {
     return -1 * number;
   } else {
@@ -25,4 +25,17 @@ export function isPrimeNumber(number) {
   }
 
   return true;
+}
+
+export function findString(part, whole) {
+  if (whole.includes(part)) return true;
+  else return false;
+}
+
+export function timeConsumingOperation(data) {
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve(data), 100);
+    if (!data) reject("error");
+  });
+  return promise;
 }
